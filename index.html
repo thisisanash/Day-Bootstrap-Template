@@ -13,6 +13,7 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
 
     <link href="style.css" rel="stylesheet" />
   </head>
@@ -45,15 +46,19 @@
     </section>
 
     <header
-      class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"
+      class="navbar navbar-expand-lg navbar-dark flex-column flex-md-row bd-navbar"
     >
       <div class="container h-100">
         <a class="navbar-brand mr-0 mr-md-2" href="/">
           <h2>DAY</h2>
         </a>
 
-        <div class="navbar-nav-scroll h-100">
-          <ul class="navbar-nav bd-navbar-nav flex-row h-100">
+        <button class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bi bi-list"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarsExample07">
+          <ul class="navbar-nav bd-navbar-nav flex-column flex-lg-row h-100">
             <li class="nav-item">
               <a
                 class="nav-link active"
@@ -142,7 +147,7 @@
       <div class="container">
         <h1>WELCOME TO DAY</h1>
         <h3>We are team of talented designers making website with Bootstrap</h3>
-        <button class="Button">GET STARTED</button>
+        <button class="button">GET STARTED</button>
       </div>
     </section>
     <script

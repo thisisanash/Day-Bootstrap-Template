@@ -47,7 +47,7 @@ h2 {
 h3 {
   font-size: 24px;
 }
-button {
+.button {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -59,9 +59,27 @@ button {
   color: #fff;
   background: transparent;
 }
-button:hover {
+.button:hover {
   background: var(--day-primery);
   border-color: var(--day-primery);
+}
+button:focus{
+  outline: 0;
+  border: 0;
+}
+
+.collapse.show{
+  position: absolute;
+  height: 50vh;
+  width: 90vw;
+  top: -40px;
+  left: 0;
+  z-index: 100;
+  background: rgb(122, 122, 122);
+}
+.collapse.show ul{
+  display: flex;
+  flex-direction: column;
 }
 
 .topbar {
@@ -72,6 +90,10 @@ header {
   background: #252525;
   padding: 0 !important;
 }
+header .navbar-nav{
+  margin-left: auto;
+}
+/* for nav link (i.e. home about....) */
 header .navbar-nav .nav-item .nav-link, header .navbar-nav .nav-item .nav-link:focus {
   display: flex;
   align-items: center;
@@ -87,11 +109,20 @@ header ul li a:hover, header li:nth-child(1) a {
 }
 .navbar-nav .nav-item, .navbar-nav .nav-item .nav-link{
     height: 100%;
-    /* font-weight: 400; */
 }
 .navbar-nav .nav-item{
     margin-left: 5px;
 }
+
+.navbar-toggler .navbar-toggler-icon{
+  color: #fff;
+  font-size: 28px;
+  line-height: 0;
+  display: contents;
+}
+
+
+
 .hero {
   color: #fff;
   height: calc(100vh - 110px);

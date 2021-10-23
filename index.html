@@ -23,7 +23,10 @@
     />
 
     <link href="style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
+
   <body>
     <section class="topbar">
       <div
@@ -368,11 +371,153 @@
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-        <button class="button">
-          call to actioin
-        </button>
+        <button class="button">call to action</button>
       </div>
     </section>
+    <section class="gallery">
+      <div class="container">
+        <div id="filters" class="filter-group">
+          <button class="filter button is-checked" data-filter="*">
+            show all
+          </button>
+          <button class="filter button" data-filter=".app">
+            app
+          </button>
+          <button class="filter button" data-filter=".card">
+            card
+          </button>
+          <button class="filter button" data-filter=".web">
+            web
+          </button>
+        </div>
+        <div class="gallery-grid row">s
+          <div class="element-item app col-4">
+            <img src="Images/portfolio/portfolio-1.jpg" alt="">
+            <div class="info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item web col-4">
+            <img src="Images/portfolio/portfolio-2.jpg" alt="">
+            <div class="info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item app col-4">
+            <img src="Images/portfolio/portfolio-3.jpg" alt="">
+            <div class="info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item card col-4">
+            <img src="Images/portfolio/portfolio-4.jpg" alt="">
+            <div class="info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item web col-4">
+            <img src="Images/portfolio/portfolio-5.jpg" alt="">
+            <div class="info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item app col-4">
+            <img src="Images/portfolio/portfolio-6.jpg" alt="">
+            <div class="info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item card col-4">
+            <img src="Images/portfolio/portfolio-7.jpg" alt="">
+            <div class="info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item card col-4">
+            <img src="Images/portfolio/portfolio-8.jpg" alt="">
+            <div class="info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <div class="element-item web col-4">
+            <img src="Images/portfolio/portfolio-9.jpg" alt="">
+            <div class="info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="" class="preview-link">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="" class="details-link">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="temp"> &nbsp</section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Packages/isotope-layout/isotope.pkgd.js"></script>
+    <script src="Packages/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-packery@2/packery-mode.pkgd.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -383,5 +528,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -383,7 +383,6 @@ header ul li:nth-child(1) a {
 
 /* ---------------- Gallery ---------------- */
 
-
 .filter-group .filter.button {
   cursor: pointer;
   display: inline-block;
@@ -491,7 +490,7 @@ header ul li:nth-child(1) a {
   right: 10px;
 }
 
-
+/* is it working */
 .temp{
   height: 40vh;
 }

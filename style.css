@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:wght@900&display=swap");
 
 :root {
-  --day-primery: rgb(204, 22, 22);
+  --day-primery: #cc1616;
   --day-dark-bg: #191919;
 }
 
@@ -31,7 +31,9 @@ h6 {
 }
 p,
 li,
-a {
+a,
+div,
+span {
   font-family: "Open Sans", sans-serif;
 }
 h1 {
@@ -74,18 +76,47 @@ button:focus {
 
 /* ---------------- Header ---------------- */
 .topbar {
+  height: 40px;
   padding: 0;
   background: var(--day-dark-bg);
+  font-size: 15px;
+}
+.topbar .contact-info i {
+  color: #cc1616;
+  line-height: 0;
+  margin-right: 5px;
+  margin-left: 15px;
+}
+.topbar .contact-info i:nth-child(1) {
+  margin-left: 5px;
+}
+.topbar .contact-info a,
+.topbar .contact-info {
+  line-height: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  text-decoration: none;
+}
+.topbar .social-links a {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 4px 12px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+}
+.topbar .contact-info a:hover,
+.topbar .social-links a:hover {
+  color: #fff;
 }
 header {
-  height: 70px;
   background: #252525;
-  padding: 0 !important;
+}
+header .header-nav .navbar-brand{
+  color: #fff;
 }
 header .navbar-nav {
   margin-left: auto;
 }
-/* for nav link (i.e. home about....) */
 header .navbar-nav .nav-item .nav-link,
 header .navbar-nav .nav-item .nav-link:focus {
   display: flex;
@@ -168,8 +199,9 @@ header ul li:nth-child(1) a {
   color: #fff;
   height: calc(100vh - 110px);
   background: url(Images/hero-bg.jpg);
+  background-position: top center;
+  background-attachment: fixed;
   position: relative;
-  background-position: 0% 20%;
   background-size: cover;
   z-index: 1;
 }
@@ -317,6 +349,8 @@ header ul li:nth-child(1) a {
   font-weight: 700;
   font-size: 52px;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: "Open Sans", sans-serif;
 }
 
 .section-title h2 {
@@ -328,6 +362,11 @@ header ul li:nth-child(1) a {
   margin-bottom: 20px;
   padding-bottom: 0;
   position: relative;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+.section-title p {
+  margin-bottom: 0;
 }
 
 /* ---------------- Service box ---------------- */
@@ -549,7 +588,8 @@ header ul li:nth-child(1) a {
   background: var(--day-primery);
   font-family: "Raleway", sans-serif;
 }
-.pricing .box .btn-buy:hover {
+.pricing .box .btn-buy:hover,
+.contact form button:hover {
   background: #e82d2d;
 }
 .pricing .main {
@@ -579,7 +619,211 @@ header ul li:nth-child(1) a {
   color: var(--day-primery);
 }
 
-/* is it working */
-.temp {
-  height: 40vh;
+/* ---------------- Team ---------------- */
+.member {
+  box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 10%);
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
+.member img {
+  max-width: 60%;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+.member span,
+.member p {
+  font-size: 13px;
+  font-style: italic;
+  display: block;
+}
+.member p {
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.member .social-icon {
+  margin-top: 15px;
+}
+.member .social-icon a {
+  color: #919191;
+  transition: 0.3s;
+}
+.member .social-icon a:hover {
+  color: var(--day-primery);
+}
+.member .social-icon i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+/* ---------------- Contact ---------------- */
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgb(214 215 216 / 60%);
+  padding: 20px 0 30px 0;
+}
+.contact .info-box i {
+  font-size: 32px;
+  color: var(--day-primery);
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #f5a0a0;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+/* map */
+.contact iframe {
+  height: 384px;
+  width: 100%;
+}
+
+.contact form {
+  box-shadow: 0 0 30px rgb(214 215 216 / 60%);
+  padding: 30px;
+}
+.contact form input {
+  border-radius: 0px;
+  padding: 10px 15px;
+}
+.contact form button {
+  background: var(--day-primery);
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+  background: #0c0c0c;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+.footer-top {
+  padding: 60px 0 30px 0;
+}
+
+.footer-top .footer-info {
+  margin-bottom: 15px;
+  background: var(--day-dark-bg);
+  color: #fff;
+  border-top: 4px solid var(--day-primery);
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer-top .footer-info h3 {
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  font-weight: 700;
+  line-height: 1;
+}
+.footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+}
+.footer-top .footer-info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #262626;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer-top .footer-link {
+  margin-bottom: 30px;
+}
+.footer-top h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 12px;
+}
+.footer-top .footer-link ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-top .footer-link ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.footer-top .footer-link ul li i {
+  padding-right: 2px;
+  color: #ed5b5b;
+  font-size: 18px;
+  line-height: 1;
+}
+.footer-top .footer-link ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-mail .mail-box {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+}
+.footer-top .footer-mail input[type="email"] {
+  border: 0;
+  padding: 4px;
+  width: calc(100% - 110px);
+}
+.footer-top .footer-mail input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #cc1616;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer .copyright {
+  border-top: 1px solid #262626;
+  padding-top: 30px;
+  text-align: center;
+}
+.footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+.footer .credits a {
+  color: var(--day-primery);
+}
+
+/* is it working */

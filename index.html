@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <section class="topbar">
+    <!-- <section class="topbar">
       <div
         class="
           container
@@ -36,136 +36,155 @@
           justify-content-between
           px-3
           py-2
-          text-center text-bold text-white
-          old-bv
+          text-center
         "
       >
         <div class="contact col d-flex flex-row">
-          <i>Icon</i>
+          <i class="bi bi-envelope-fill"></i>
           <a>info@example.com</a>
-          <i>Icon</i>
+          
+          <i class="bi bi-phone-fill phone-icon"></i>
           <a>info@example.com</a>
         </div>
 
         <div class="social col d-flex flex-row-reverse">
-          <i>I</i>
-          <i>I</i>
-          <i>I</i>
-          <i>I</i>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-twitter"></i>
         </div>
       </div>
-    </section>
-
-    <header
-      class="
-        navbar navbar-expand-lg navbar-dark
-        flex-column flex-md-row
-        bd-navbar
-      "
-    >
-      <div class="container h-100">
-        <a class="navbar-brand mr-0 mr-md-2" href="/">
-          <h2>DAY</h2>
-        </a>
-
-        <button
-          class="navbar-toggler collapsed border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarsExample07"
-          aria-controls="navbarsExample07"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+    </section> -->
+    <header class="header">
+      <section class="topbar d-flex align-items-center">
+        <div
+          class="
+            container
+            d-flex
+            justify-content-center justify-content-md-between
+          "
         >
-          <span class="navbar-toggler-icon bi bi-list"></span>
-        </button>
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i
+            ><a href="mailto:thisisanash.official@gmail.com"
+              >thisisanash.official@.com</a
+            >
+            <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+          </div>
+          <div class="social-links d-none d-md-block">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </section>
+      <div
+        class="header-nav navbar navbar-expand-lg flex-column flex-md-row p-0"
+      >
+        <div class="container h-100">
+          <a class="navbar-brand mr-0 mr-md-2" href="/">
+            <h2>DAY</h2>
+          </a>
 
-        <div class="navbar-collapse collapse" id="navbarsExample07">
-          <ul class="navbar-nav bd-navbar-nav flex-column flex-lg-row">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="/docs/4.0/getting-started/introduction/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="/docs/4.0/examples/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');"
-                >Service</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://themes.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');"
-                target="_blank"
-                rel="noopener"
-                >Portfolio</a
-              >
-            </li>
+          <button
+            class="navbar-toggler collapsed border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsExample07"
+            aria-controls="navbarsExample07"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon bi bi-list"></span>
+          </button>
 
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://expo.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');"
-                target="_blank"
-                rel="noopener"
-                >Pricing</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://blog.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');"
-                target="_blank"
-                rel="noopener"
-                >Team</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdown05"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-              >
-              <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="/docs/4.0/examples/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');"
-                >Contact</a
-              >
-            </li>
-          </ul>
+          <div class="navbar-collapse collapse" id="navbarsExample07">
+            <ul class="navbar-nav bd-navbar-nav flex-column flex-lg-row">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/docs/4.0/getting-started/introduction/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/docs/4.0/examples/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');"
+                  >Service</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://themes.getbootstrap.com/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');"
+                  target="_blank"
+                  rel="noopener"
+                  >Portfolio</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://expo.getbootstrap.com/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');"
+                  target="_blank"
+                  rel="noopener"
+                  >Pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://blog.getbootstrap.com/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');"
+                  target="_blank"
+                  rel="noopener"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown05"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Dropdown</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/docs/4.0/examples/"
+                  onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
-
     <section class="hero d-flex align-items-center">
       <div class="container text-lg-start text-center">
         <h1>WELCOME TO DAY</h1>
@@ -173,7 +192,6 @@
         <button class="button">GET STARTED</button>
       </div>
     </section>
-
     <section class="about">
       <div class="container p-0 d-flex flex-lg-row-reverse flex-column g-4">
         <div class="col-lg-6 about-part">
@@ -214,7 +232,6 @@
         </div>
       </div>
     </section>
-
     <section class="why-us">
       <div class="container p-0 d-flex flex-lg-row flex-column g-4">
         <div class="col-lg-4">
@@ -249,10 +266,9 @@
         </div>
       </div>
     </section>
-
     <section class="clients">
       <div class="container">
-        <div class="row d-flex align-content-center">
+        <div class="row d-flex align-items-center">
           <div class="col-6 col-md-4 col-lg-2">
             <img src="Images/client-1.png" alt="" />
           </div>
@@ -274,7 +290,6 @@
         </div>
       </div>
     </section>
-
     <section class="services">
       <div class="container">
         <div class="section-title">
@@ -301,67 +316,66 @@
           <div class="col-12 col-md-6 col-lg-4 mt-4 mt-md-0">
             <div class="box">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bx-file"></i>
               </div>
-              <h3>Lorem Ipsum</h3>
+              <h3>Sed ut perspiciatis</h3>
               <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore
               </p>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bx-tachometer"></i>
               </div>
-              <h3>Lorem Ipsum</h3>
+              <h3>Magni Dolores</h3>
               <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia
               </p>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 mt-4">
             <div class="box">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bx-world"></i>
               </div>
-              <h3>Lorem Ipsum</h3>
+              <h3>Nemo Enim</h3>
               <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis
               </p>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 mt-4">
             <div class="box">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bx-slideshow"></i>
               </div>
-              <h3>Lorem Ipsum</h3>
+              <h3>Dele cardo</h3>
               <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
+                Quis consequatur saepe eligendi voluptatem consequatur dolor
+                consequuntur
               </p>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 mt-4">
             <div class="box">
               <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+                <i class="bx bx-arch"></i>
               </div>
-              <h3>Lorem Ipsum</h3>
+              <h3>Divera don</h3>
               <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
+                Modi nostrum vel laborum. Porro fugit error sit minus sapiente
+                sit aspernatur
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <section class="cta">
       <div class="container text-center">
         <h3>Call To Action</h3>
@@ -600,9 +614,287 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <section class="team">
+      <div class="container">
+        <div class="section-title">
+          <h1>Team</h1>
+          <h2>Team</h2>
+          <p>
+            Sit sint consectetur velit quisquam cupiditate impedit suscipit
+            alias
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <img src="Images/team/team-1.jpg" alt="" />
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
+              <p>
+                Magni qui quod omnis unde et eos fuga et exercitationem. Odio
+                veritatis perspiciatis quaerat qui aut aut aut
+              </p>
+              <div class="social-icon">
+                <a href="https://twitter.com/thisisanash"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com/thisisansah"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="https://www.instagram.com/thisisanash/"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/thisisanash/"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <img src="Images/team/team-2.jpg" alt="" />
+              <h4>Sarah Jhinson</h4>
+              <span>Product Manager</span>
+              <p>
+                Repellat fugiat adipisci nemo illum nesciunt voluptas
+                repellendus. In architecto rerum rerum temporibus
+              </p>
+              <div class="social-icon">
+                <a href="https://twitter.com/thisisanash"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com/thisisansah"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="https://www.instagram.com/thisisanash/"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/thisisanash/"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <img src="Images/team/team-3.jpg" alt="" />
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+              <p>
+                Voluptas necessitatibus occaecati quia. Earum totam consequuntur
+                qui porro et laborum toro des clara
+              </p>
+              <div class="social-icon">
+                <a href="https://twitter.com/thisisanash"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com/thisisansah"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="https://www.instagram.com/thisisanash/"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/thisisanash/"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h1>Contact</h1>
+          <h2>Contact</h2>
+          <p>
+            Sit sint consectetur velit quisquam cupiditate impedit suscipit
+            alias
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>355 Mouli Street, Chandigarh, CH 160102</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>thisisanash.official@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.7873389813385!2d76.82591431505855!3d30.696258981649816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f934c9cb60495%3A0xbf42bbab6b85176!2sAhmed%20Curtain%20And%20Embroidery!5e0!3m2!1sen!2sin!4v1635184087046!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="col-lg-6">
+            <form>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required=""
+                  />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  required=""
+                />
+              </div>
+              <div class="form-group my-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  placeholder="Message"
+                  required=""
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-info">
+                <h3>Day</h3>
+                <p>
+                  A108 Adam Street<br />
+                  NY 535022, USA<br />
+                  <br />
+                  <strong>Phone:</strong> +1 5589 55488 55<br />
+                  <strong>Email:</strong> thisisanash.official@gmail.com<br />
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                  <a href="#" class="instagram"
+                    ><i class="bx bxl-instagram"></i
+                  ></a>
+                  <a href="#" class="google-plus"
+                    ><i class="bx bxl-skype"></i
+                  ></a>
+                  <a href="#" class="linkedin"
+                    ><i class="bx bxl-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-link col-lg-2 col-md-6">
+              <h4>Useful Links</h4>
+              <ul>
+                <li class="pt-0">
+                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-link col-lg-2 col-md-6">
+              <h4>Our Services</h4>
+              <ul>
+                <li class="pt-0">
+                  <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Web Development</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Product Management</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Marketing</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Graphiv Design</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 footer-mail">
+              <h4>Our Newsletter</h4>
+              <p>
+                Tamen quem nulla quae legam multos aute sint culpa legam noster
+                magna
+              </p>
+              <div class="mail-box">
+                <input type="email" />
+                <input type="submit" value="Subscribe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          © Copyright <strong>Day</strong>. All Rights Reserved
+        </div>
+        <div class="credits">Develop by <a>Muhammad Anash</a></div>
+      </div>
+    </footer>
 
-    <section class="temp">&nbsp</section>
+    <!-- <section class="temp">&nbsp</section> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Packages/isotope-layout/isotope.pkgd.js"></script>

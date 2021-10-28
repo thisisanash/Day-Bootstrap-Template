@@ -13,7 +13,8 @@
   /* border: 1px dotted #808080; */
 }
 
-body {
+body,
+.main {
   margin: 0;
   padding: 0;
   color: #444444;
@@ -28,6 +29,9 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+}
+a {
+  cursor: pointer;
 }
 p,
 li,
@@ -82,7 +86,7 @@ button:focus {
   font-size: 15px;
 }
 .topbar .contact-info i {
-  color: #cc1616;
+  color: var(--day-primery);
   line-height: 0;
   margin-right: 5px;
   margin-left: 15px;
@@ -111,7 +115,15 @@ button:focus {
 header {
   background: #252525;
 }
-header .header-nav .navbar-brand{
+header #navbar {
+  transition: 0.3s;
+  background: #252525;
+  height: 70px;
+}
+header #navbar.fixed-top {
+  background: var(--day-dark-bg);
+}
+header .navbar .navbar-brand {
   color: #fff;
 }
 header .navbar-nav {
@@ -129,15 +141,81 @@ header .navbar-nav .nav-item .nav-link:focus {
   transition: 0.3s ease;
 }
 header ul li a:hover,
-header ul li:nth-child(1) a {
+header > ul li:nth-child(1) a {
   background: var(--day-primery);
-}
-.navbar-nav .nav-item,
-.navbar-nav .nav-item .nav-link {
-  height: 100%;
 }
 .navbar-nav .nav-item {
   margin-left: 5px;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 40px);
+  margin: 0;
+  padding: 10px 0 !important;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  color: var(--day-dark-bg);
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  list-style: none;
+}
+
+.navbar .dropdown ul li {
+  background: #fff;
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  color: #191919;
+  text-decoration: none;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar a:hover,
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a,
+.navbar .dropdown:hover > a {
+  background: var(--day-primery);
+  color: #fff;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(-100% + 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: -100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
 }
 
 /* toggle collapsed */
@@ -174,7 +252,7 @@ header ul li:nth-child(1) a {
 }
 .collapse.show ul li .nav-link {
   padding: 10px 20px;
-  color: #191919;
+  color: var(--day-dark-bg);
   font-size: 15;
   height: fit-content;
   background: transparent;
@@ -214,6 +292,9 @@ header ul li:nth-child(1) a {
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+.hero.scrolled-offset {
+  margin-top: 70px;
 }
 .hero h3 {
   margin-bottom: 30px;
@@ -756,6 +837,9 @@ header ul li:nth-child(1) a {
   height: 36px;
   transition: 0.3s;
 }
+.footer-top .footer-info .social-links a:hover {
+  background: var(--day-primery);
+}
 
 .footer-top .footer-link {
   margin-bottom: 30px;
@@ -776,6 +860,7 @@ header ul li:nth-child(1) a {
   display: flex;
   align-items: center;
   line-height: 1;
+  cursor: pointer;
 }
 .footer-top .footer-link ul li i {
   padding-right: 2px;
@@ -786,6 +871,10 @@ header ul li:nth-child(1) a {
 .footer-top .footer-link ul li a {
   color: #fff;
   text-decoration: none;
+}
+.footer-top .footer-link ul li:hover a {
+  color: var(--day-primery);
+  cursor: pointer;
 }
 .footer-mail .mail-box {
   margin-top: 30px;
@@ -824,6 +913,29 @@ header ul li:nth-child(1) a {
 }
 .footer .credits a {
   color: var(--day-primery);
+}
+
+/* ---------------- back-to-top button ---------------- */
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: var(--day-primery);
+  width: 40px;
+  height: 40px;
+  transition: all 0.4s;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
 }
 
 /* is it working */

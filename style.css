@@ -13,13 +13,43 @@
   /* border: 1px dotted #808080; */
 }
 
+::selection {
+  color: #fff;
+  background: var(--day-primery);
+}
+
 body {
   margin: 0;
   padding: 0;
   color: #444444;
+  overflow: overlay;
 }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+	border-radius: 0;
+	background-color: hsla(0, 0%, 50%, 0.05);
+}
+::-webkit-scrollbar
+{
+	width: 7.5px;
+	background-color:  hsla(0, 0%, 50%, 0.05);
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 0px hsl(0, 0%, 0%, 0.05);
+	background-color: #80808080;
+}s
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
 section {
   padding: 60px 0px;
+  width: 100%;
+  overflow-y: hidden;
 }
 h1,
 h2,
@@ -118,6 +148,7 @@ header #navbar {
   transition: 0.3s;
   background: #252525;
   height: 70px;
+  overflow-y: visible;
 }
 header #navbar.fixed-top {
   background: var(--day-dark-bg);
@@ -137,12 +168,9 @@ header .navbar-nav .nav-item .nav-link:focus {
   font-size: 14px;
   color: #fff;
   white-space: nowrap;
-  transition: 0.3s ease;
+  transition: 0.1s ease-in;
 }
-header ul li a:hover,
-header > ul li:nth-child(1) a {
-  background: var(--day-primery);
-}
+
 .navbar-nav .nav-item {
   margin-left: 5px;
 }
@@ -168,7 +196,7 @@ header > ul li:nth-child(1) a {
   color: var(--day-dark-bg);
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
+  /* transition-delay: 0.1s; */
   list-style: none;
 }
 
@@ -187,12 +215,13 @@ header > ul li:nth-child(1) a {
   margin-left: 5px;
 }
 .navbar a:hover,
+.navbar .nav-link.active,
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a,
 .navbar .dropdown:hover > a {
-  background: var(--day-primery);
   color: #fff;
+  background: var(--day-primery);
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -203,6 +232,7 @@ header > ul li:nth-child(1) a {
   top: 0;
   left: calc(-100% + 30px);
   visibility: hidden;
+  opacity: 0;
 }
 .navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
@@ -210,66 +240,191 @@ header > ul li:nth-child(1) a {
   left: -100%;
   visibility: visible;
 }
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
+.navabr-collapase {
+  transition: none !important;
+}
+@media (max-width: 720px) {
+  .navbar .navbar-brand {
+    position: absolute;
+    /* left: 0; */
   }
-  .navbar .dropdown .dropdown:hover > ul {
-    left: -100%;
+  .navbar-toggler {
+    color: transparent;
+    position: absolute;
+    right: 12px;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+    /*  */
   }
-}
+  .navbar-toggler .bi-list::before{
+    transform: 1s;
+  }
+  .navbar-toggler:not(.collapsed) .bi-list::before {
+    content: "\f62a";
+    color: var(--day-primery);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+    transition: 0.3s;
+  }
 
-/* toggle collapsed */
+  header .navbar-nav .nav-item .nav-link,
+  header .navbar-nav .nav-item .nav-link:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: transparent;
+    white-space: nowrap;
+    transition: 0.1s ease-in;
+  }
 
-.navbar-toggler .navbar-toggler-icon {
-  color: #fff;
-  font-size: 28px;
-  line-height: 0;
-  display: contents;
-}
+  .navbar .nav-link.active {
+    background: transparent;
+  }
+  header .collapse .nav-link,
+  header .collapse .nav-link:focus {
+    color: transparent;
+  }
+  header .collapse.show .nav-link,
+  header .collapse.show .nav-link:focus {
+    color: #fff;
+  }
 
-/* After toggle style */
-.collapse.show {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  top: -40px;
-  left: 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 55px 15px 0px 15px;
-}
-.collapse.show ul {
-  display: flex;
-  position: absolute;
-  height: calc(100vh - 55px);
-  width: calc(100vw - 30px);
-  padding: 10px 0px;
-  background: rgb(255, 255, 255);
-  color: #000;
-}
-.collapse.show ul .nav-item {
-  height: fit-content;
-}
-.collapse.show ul li .nav-link {
-  padding: 10px 20px;
-  color: var(--day-dark-bg);
-  font-size: 15;
-  height: fit-content;
-  background: transparent;
-}
-.collapse.show ul li .nav-link:hover,
-.collapse.show ul .nav-link.active {
-  background: transparent;
-  color: var(--day-primery);
-}
-.navbar-toggler:not(.collapsed) .bi-list::before {
-  content: "\f62a";
-  color: var(--day-primery);
-  position: absolute;
-  top: -25px;
-  right: 15px;
-  z-index: 101;
+  .navbar .collapse {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 55px 15px 0px 15px;
+    transition: 0.2s;
+    /* transition-delay: 0.1s; */
+    /*  */
+    opacity: 0;
+    visibility: hidden;
+  }
+  .navbar .collapse ul {
+    display: flex;
+    position: absolute;
+    height: calc(100vh - 55px);
+    width: calc(100vw - 30px);
+    padding: 10px 0px;
+    background: transparent;
+    color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    /* transition-delay: 0.1s; */
+    /*  */
+  }
+  .navbar .collapse.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transition: 0.1s;
+  }
+  .navbar .collapse .dropdown ul {
+    transition: 0.1s;
+    /* transition-delay: 0.1s; */
+  }
+  .navbar .collapse.show .dropdown ul {
+    background: #fff;
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.1s;
+    /* transition-delay: 0.1s; */
+  }
+  .navbar .collapse.show a.nav-link {
+    transition: 0.01s ease-in;
+    transition-delay: 0s;
+  }
+
+  .navbar .collapse.show .dropdown ul li {
+    min-width: 200px;
+  }
+  .navbar .collapse.show .dropdown ul a {
+    padding: 10px 20px;
+  }
+  .navbar .collapse.show .dropdown ul a i {
+    font-size: 12px;
+  }
+  .navbar .collapse.show .dropdown ul a:hover,
+  .navbar .collapse.show .dropdown ul .active:hover,
+  .navbar .collapse.show .dropdown ul li:hover > a {
+    color: #cc1616;
+  }
+  .navbar .collapse.show .dropdown > .dropdown-active {
+    display: block;
+  }
+  /* toggle collapsed */
+
+  .navbar-toggler .navbar-toggler-icon {
+    color: #fff;
+    font-size: 28px;
+    line-height: 0;
+    display: contents;
+    transition: 0.3s;
+    /* transition-delay: 0.1s; */
+    /*  */
+  }
+
+  /* After toggle style */
+
+  .collapse.show {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 55px 15px 0px 15px;
+    transition: 0.12s;
+    /* transition-delay: 0.1s; */
+    /*  */
+    opacity: 1;
+    visibility: visible;
+  }
+  .collapse.show ul {
+    display: flex;
+    position: absolute;
+    height: calc(100vh - 55px);
+    width: calc(100vw - 30px);
+    padding: 10px 0px;
+    background: rgb(255, 255, 255);
+    color: #000;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.1s;
+    transition-delay: 0.1s;
+    /*  */
+  }
+  .collapse.show ul .nav-item {
+    height: fit-content;
+  }
+  .collapse.show ul li .nav-link {
+    padding: 10px 20px;
+    color: var(--day-dark-bg);
+    font-size: 15;
+    height: fit-content;
+    background: transparent;
+  }
+  .collapse.show ul li .nav-link:hover,
+  .collapse.show ul .nav-link.active {
+    background: transparent;
+    color: var(--day-primery);
+  }
+  
 }
 
 /* ---------------- Hero ---------------- */
@@ -485,14 +640,13 @@ header > ul li:nth-child(1) a {
   background: #fff;
   box-shadow: -10px -10px 0px #e82d2d;
 }
-  .services .box .icon i {
+.services .box .icon i {
   color: #fff;
   font-size: 28px;
 }
 .services .box:hover .icon i {
   color: var(--day-primery);
 }
-
 
 /* ---------------- Cta ---------------- */
 
@@ -735,17 +889,17 @@ header > ul li:nth-child(1) a {
   font-size: 14px;
   color: #aaaaaa;
 }
-.member .social-icon {
+.member .social-icons {
   margin-top: 15px;
 }
-.member .social-icon a {
+.member .social-icons a {
   color: #919191;
   transition: 0.3s;
 }
-.member .social-icon a:hover {
+.member .social-icons a:hover {
   color: var(--day-primery);
 }
-.member .social-icon i {
+.member .social-icons i {
   font-size: 18px;
   margin: 0 2px;
 }
@@ -953,4 +1107,3 @@ header > ul li:nth-child(1) a {
   line-height: 0;
 }
 
-/* is it working */
